@@ -8,6 +8,12 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  let newObj = {};
+  for (const key in obj) {
+    const element = obj[key];
+    newObj[key] = element.trim();
+  }
+  return newObj;
 }
 
 /**
@@ -18,8 +24,13 @@ function trimProperties(obj) {
  * EXAMPLE
  * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
  */
+
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for(let key in obj){
+    obj[key] = obj[key].trim()
+  }
+  return obj;
 }
 
 /**
@@ -32,6 +43,7 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  return Math.max.apply(null,integers);
 }
 
 class Counter {
@@ -41,6 +53,8 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.initialNumber = initialNumber
+
   }
 
   /**
@@ -57,8 +71,10 @@ class Counter {
    */
   countDown() {
     // ✨ implement
+    return this.initialNumber < 1 ? this.initialNumber : this.initialNumber -= 1
   }
 }
+
 
 class Seasons {
   /**
@@ -66,6 +82,7 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
+    this.seasons = "summer"
   }
 
   /**
@@ -82,8 +99,21 @@ class Seasons {
    */
   next() {
     // ✨ implement
+    const seasonPicks = ['summer', 'fall', 'winter', 'spring'];
+    const i = seasonPicks.findIndex(season => season === this.seasons);
+    console.log(i)
+    if(i < 3){
+      this.seasons = seasonPicks[i + 1]
+    }else{
+      this.seasons = seasonPicks[i - 3]
+    }
   }
 }
+const seasons = new Seasons()
+
+
+
+console.log(seasons)
 
 class Car {
   /**
