@@ -71,7 +71,7 @@ class Counter {
    */
   countDown() {
     // ✨ implement
-    return this.initialNumber < 1 ? this.initialNumber : this.initialNumber -= 1
+    return this.initialNumber < 0 ? this.initialNumber : this.initialNumber -= 1
   }
 }
 
@@ -109,11 +109,6 @@ class Seasons {
     }
   }
 }
-const seasons = new Seasons()
-
-
-
-console.log(seasons)
 
 class Car {
   /**
@@ -126,6 +121,7 @@ class Car {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
     // ✨ initialize whatever other properties are needed
+    this.mpg = ;
   }
 
   /**
@@ -143,6 +139,8 @@ class Car {
    */
   drive(distance) {
     // ✨ implement
+
+
   }
 
   /**
