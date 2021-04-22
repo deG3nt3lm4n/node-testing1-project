@@ -14,15 +14,9 @@ describe('[Exercise 1] trimProperties', () => {
   })
   it('[2] returns a copy, leaving the original object intact', () => {
     // ✨ test away
-<<<<<<< HEAD
     const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
     const actual = utils.trimProperties(input)
     expect(actual).not.toBe(input)
-=======
-    const inputCopy = {...input}
-    utils.trimProperties(input)
-    expect(input).toEqual(inputCopy)
->>>>>>> 2693f2a846e1d4038010ca159530fc4086c912ad
   })
 })
 
