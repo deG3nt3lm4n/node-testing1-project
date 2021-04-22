@@ -8,12 +8,23 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+<<<<<<< HEAD
   let newObj = {};
   for (const key in obj) {
     const element = obj[key];
     newObj[key] = element.trim();
   }
   return newObj;
+=======
+  let trimmedObj = {}
+  for(let key in obj){
+    trimmedObj = {
+      ...trimmedObj,
+      [key]: obj[key].trim()
+    }
+  }
+  return trimmedObj
+>>>>>>> 2693f2a846e1d4038010ca159530fc4086c912ad
 }
 
 /**
@@ -27,10 +38,19 @@ function trimProperties(obj) {
 
 function trimPropertiesMutation(obj) {
   // ✨ implement
+<<<<<<< HEAD
   for(let key in obj){
     obj[key] = obj[key].trim()
   }
   return obj;
+=======
+
+  for(let key in obj){
+    obj[key] = obj[key].trim()
+  }
+  return obj
+
+>>>>>>> 2693f2a846e1d4038010ca159530fc4086c912ad
 }
 
 /**
